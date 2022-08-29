@@ -1,0 +1,211 @@
+Profession,Name,Rarity,Skill,%,Commission,Speed,Proficiency,Focus,,,Profession,Name,Rarity,Skill,%,Commission,Speed,Proficiency,Focus
+Adventurer,Akkya Petalwind,Common,Virtuoso,10,50,0,377,433,,,Adventurer,Rona Farhill,Common,Miracle Worker,15,0,75,345,345
+Adventurer,Braunt Lowport,Common,Miracle Worker,5,50,-25,388,433,,,Adventurer,Brenton Silverwood,Common,Miracle Worker,10,0,0,390,330
+Adventurer,Brenton Silverwood,Common,Miracle Worker,10,0,0,439,371,,,Adventurer,Osskor Brundahl,Rare,Miracle Worker,20,25,0,385,345
+Adventurer,Dilara Ayak,Common,Dab Hand,10,25,50,377,416,,,Adventurer,Corynn Koldavat,Rare,Dab Hand,25,50,-25,350,385
+Adventurer,Elend Legrande,Common,Passion Project,10,-25,0,405,388,,,Adventurer,Saba Ohchibe,Rare,Miracle Worker,20,75,50,345,385
+Adventurer,Joanhild Stouthammer,Common,Dab Hand,20,25,-25,422,377,,,Adventurer,Sven Longriver,Common,Virtuoso,15,75,0,360,360
+Adventurer,Kolneg Stouthammer,Common,Dab Hand,10,50,0,405,405,,,Adventurer,Braunt Lowport,Common,Miracle Worker,5,50,-25,345,385
+Adventurer,Nadia Evendown,Common,Passion Project,15,-25,-25,405,388,,,Adventurer,Dilara Ayak,Common,Dab Hand,10,25,50,335,370
+Adventurer,Rona Farhill,Common,Miracle Worker,15,0,75,388,388,,,Adventurer,Xerazze D'Zzen,Rare,Virtuoso,25,-25,75,360,340
+Adventurer,Sven Longriver,Common,Virtuoso,15,75,0,405,405,,,Adventurer,Heyra Keeneye,Rare,Virtuoso,5,0,0,390,350
+Adventurer,Corynn Koldavat,Rare,Dab Hand,25,50,-25,394,433,,,Adventurer,Jahi Waradi,Rare,Passion Project,15,50,0,355,385
+Adventurer,Dorrak,Rare,Virtuoso,15,-25,0,433,383,,,Adventurer,Dorrak,Rare,Virtuoso,15,-25,0,385,340
+Adventurer,Feira Halindeyl,Rare,Passion Project,20,0,-50,383,444,,,Adventurer,Nadia Evendown,Common,Passion Project,15,-25,-25,360,345
+Adventurer,Heyra Keeneye,Rare,Virtuoso,5,0,0,439,394,,,Adventurer,Kolneg Stouthammer,Common,Dab Hand,10,50,0,360,360
+Adventurer,Jahi Waradi,Rare,Passion Project,15,50,0,399,433,,,Adventurer,Akkya Petalwind,Common,Virtuoso,10,50,0,335,385
+Adventurer,Murchadh Ossian,Rare,Dab Hand,10,50,25,416,416,,,Adventurer,Paelion Lightfeather,Rare,Miracle Worker,15,50,100,330,390
+Adventurer,Osskor Brundahl,Rare,Miracle Worker,20,25,0,433,388,,,Adventurer,Joanhild Stouthammer,Common,Dab Hand,20,25,-25,375,335
+Adventurer,Paelion Lightfeather,Rare,Miracle Worker,15,50,100,371,439,,,Adventurer,Elend Legrande,Common,Passion Project,10,-25,0,360,345
+Adventurer,Saba Ohchibe,Rare,Miracle Worker,20,75,50,388,433,,,Adventurer,Malvina Mithralhand,Epic,Dab Hand,25,75,-50,390,380
+Adventurer,Xerazze D'Zzen,Rare,Virtuoso,25,-25,75,405,383,,,Adventurer,Murchadh Ossian,Rare,Dab Hand,10,50,25,370,370
+Adventurer,Evelyn Nara,Epic,Miracle Worker,25,100,200,366,450,,,Adventurer,Krunng Sweetwater,Epic,Dab Hand,20,200,0,400,380
+Adventurer,Krunng Sweetwater,Epic,Dab Hand,20,200,0,450,428,,,Adventurer,Pan Whitewood,Epic,Virtuoso,20,75,50,355,400
+Adventurer,Malvina Mithralhand,Epic,Dab Hand,25,75,-50,439,428,,,Adventurer,Feira Halindeyl,Rare,Passion Project,20,0,-50,340,395
+Adventurer,Pan Whitewood,Epic,Virtuoso,20,75,50,399,450,,,Adventurer,Trys Kiirendal,Epic,Passion Project,25,100,50,360,395
+Adventurer,Trys Kiirendal,Epic,Passion Project,25,100,50,405,444,,,Adventurer,Vorryl Farwalker,Epic,Miracle Worker,25,200,-25,395,395
+Adventurer,Vorryl Farwalker,Epic,Miracle Worker,25,200,-25,444,444,,,Adventurer,Evelyn Nara,Epic,Miracle Worker,25,100,200,325,400
+Alchemist,Unkra Forend,Common,Dab Hand,15,-25,50,388,388,,,Jeweler,Nifhild Amberbeard,Common,Passion Project,10,-25,-75,375,345
+Alchemist,Fenma Loharn,Common,Passion Project,20,25,-50,416,388,,,Jeweler,Boern Norrdal,Common,Miracle Worker,5,50,-50,385,350
+Alchemist,Sten Oakfoot,Common,Recycle,10,0,0,399,399,,,Jeweler,Bree Underleaf,Common,Dab Hand,15,-50,0,375,320
+Alchemist,Noen Ethulia,Common,Virtuoso,10,100,-25,394,433,,,Jeweler,Gerard t'Orryn,Rare,Miracle Worker,25,25,0,375,350
+Alchemist,Jayms Pallisat,Common,Passion Project,20,-25,25,383,394,,,Jeweler,Brenndan Qelgal,Common,Recycle,10,-25,-25,320,390
+Alchemist,Jala Astraad,Common,Recycle,10,0,-50,377,433,,,Jeweler,Saveed Al'Thabt,Common,Virtuoso,10,75,0,340,385
+Alchemist,Seyrin Hartport,Common,Virtuoso,20,-50,-25,377,405,,,Jeweler,Rennet Brodau,Rare,Passion Project,15,150,-50,355,390
+Alchemist,Nayet Al-Abta,Common,Virtuoso,10,50,-75,444,383,,,Jeweler,Patime Hoshur,Common,Miracle Worker,20,0,100,340,340
+Alchemist,Heywa Undapu,Common,Miracle Worker,20,0,0,394,394,,,Jeweler,Eban Lodell,Rare,Recycle,15,25,25,365,365
+Alchemist,Kefhen Jorola,Common,Dab Hand,20,100,0,371,439,,,Jeweler,Pharlen Ghiberti,Epic,Miracle Worker,20,25,175,385,335
+Alchemist,Dorne Fluben,Rare,Miracle Worker,10,100,0,411,439,,,Jeweler,Nasrii Zadan,Common,Virtuoso,10,50,-25,385,340
+Alchemist,Flug Tordbrin,Rare,Dab Hand,15,-25,0,433,383,,,Jeweler,Haie Xilomne,Common,Passion Project,20,-75,75,335,335
+Alchemist,Iris d'Lafonte,Rare,Passion Project,5,200,-75,433,433,,,Jeweler,Ned Stonebottom,Common,Dab Hand,5,25,-25,385,340
+Alchemist,Janiwah Al-Afad,Rare,Recycle,15,75,0,394,444,,,Jeweler,Aiha Amaphilel,Rare,Miracle Worker,20,-75,125,330,330
+Alchemist,Kilij Harran,Rare,Passion Project,15,-50,0,433,377,,,Jeweler,Naidyn Emenshire,Common,Recycle,5,-25,0,360,350
+Alchemist,Lee Darnela,Rare,Virtuoso,15,-25,0,433,383,,,Jeweler,Tresse Ambryn,Rare,Dab Hand,20,200,0,385,380
+Alchemist,Letotto Falthad,Rare,Dab Hand,20,-50,75,388,399,,,Jeweler,Silla Clearlake,Rare,Recycle,20,0,0,340,385
+Alchemist,Minda Breskhild,Rare,Recycle,25,75,-75,450,394,,,Jeweler,Aen Coppler,Rare,Virtuoso,5,100,-25,380,385
+Alchemist,Ross Silverhill,Rare,Virtuoso,20,25,25,433,388,,,Jeweler,Arrin Whistleleaf,Rare,Recycle,15,50,-25,390,355
+Alchemist,Zutto K'Lotha,Rare,Virtuoso,15,25,0,433,394,,,Jeweler,Alyss Quorthlyn,Rare,Passion Project,15,75,-50,380,375
+Alchemist,Adloquium,Epic,Dab Hand,20,-75,0,422,405,,,Jeweler,Volen Naimne,Epic,Virtuoso,25,25,75,335,400
+Alchemist,Beatrice,Epic,Recycle,25,0,0,388,450,,,Jeweler,Carazza Flaraalys,Rare,Virtuoso,15,125,0,340,390
+Alchemist,Efla Parkatha,Epic,Virtuoso,25,200,-25,444,444,,,Jeweler,Olin Diamondeye,Epic,Recycle,10,75,0,395,380
+Alchemist,Mavi Jubbani,Epic,Virtuoso,25,75,-50,428,439,,,Jeweler,Charlette Favri,Epic,Recycle,25,125,0,370,400
+Alchemist,Paelinn Shardhilt,Epic,Recycle,20,-25,25,416,416,,,Jeweler,Halsstra T'Zovrrin,Epic,Miracle Worker,20,-25,125,360,360
+Alchemist,Yungric,Epic,Miracle Worker,25,0,125,360,450,,,Jeweler,Tuala Uwoke,Epic,Dab Hand,20,100,0,385,385
+Armorer,Bitrid Brasshammer,Common,Recycle,25,-75,0,383,383,,,Alchemist,Unkra Forend,Common,Dab Hand,15,-25,50,345,345
+Armorer,Cord Brackman,Common,Recycle,10,25,-25,405,405,,,Alchemist,Fenma Loharn,Common,Passion Project,20,25,-50,370,345
+Armorer,Enurai Anturiel,Common,Virtuoso,5,50,-25,405,405,,,Alchemist,Sten Oakfoot,Common,Recycle,10,0,0,355,355
+Armorer,Erwan Laurent,Common,Virtuoso,10,25,-25,436,394,,,Alchemist,Noen Ethulia,Common,Virtuoso,10,100,-25,350,385
+Armorer,Jane Silverhearth,Common,Recycle,5,-25,0,399,399,,,Alchemist,Jayms Pallisat,Common,Passion Project,20,-25,25,340,350
+Armorer,Jenifyr Liamnoen,Common,Passion Project,10,75,-25,388,433,,,Alchemist,Jala Astraad,Common,Recycle,10,0,-50,335,385
+Armorer,Oskar Danforge,Common,Miracle Worker,25,100,100,399,383,,,Alchemist,Letotto Falthad,Rare,Dab Hand,20,-50,75,345,355
+Armorer,Storbek Ironfoot,Common,Dab Hand,10,25,0,416,388,,,Alchemist,Minda Breskhild,Rare,Recycle,25,75,-75,400,350
+Armorer,Torbryn Unker,Common,Miracle Worker,10,25,100,422,360,,,Alchemist,Yungric,Epic,Miracle Worker,25,0,125,320,400
+Armorer,Yulia Strauss,Common,Virtuoso,25,25,25,388,394,,,Alchemist,Seyrin Hartport,Common,Virtuoso,20,-50,-25,335,360
+Armorer,Aynhild Rubystone,Rare,Miracle Worker,20,50,0,433,394,,,Alchemist,Nayet Al-Abta,Common,Virtuoso,10,50,-75,395,340
+Armorer,Bridgit Foucault,Rare,Dab Hand,20,75,25,399,428,,,Alchemist,Heywa Undapu,Common,Miracle Worker,20,0,0,350,350
+Armorer,Dorfok Guggenston,Rare,Virtuoso,15,-25,0,433,383,,,Alchemist,Mavi Jubbani,Epic,Virtuoso,25,75,-50,380,390
+Armorer,Eamhair Seaghdha,Rare,Recycle,10,50,0,416,422,,,Alchemist,Kefhen Jorola,Common,Dab Hand,20,100,0,330,390
+Armorer,Enako Kadou,Rare,Passion Project,10,125,-50,428,439,,,Alchemist,Dorne Fluben,Rare,Miracle Worker,10,100,0,365,390
+Armorer,Mitra Lashgari,Rare,Virtuoso,5,0,0,439,394,,,Alchemist,Lee Darnela,Rare,Virtuoso,15,-25,0,385,340
+Armorer,Naera Amanodel,Rare,Passion Project,25,50,75,422,383,,,Alchemist,Janiwah Al-Afad,Rare,Recycle,15,75,0,350,395
+Armorer,Storborn Stonefist,Rare,Dab Hand,15,25,0,377,439,,,Alchemist,Iris d'Lafonte,Rare,Passion Project,5,200,-75,385,385
+Armorer,Ulfred Gorheim,Rare,Passion Project,20,25,0,433,388,,,Alchemist,Kilij Harran,Rare,Passion Project,15,-50,0,385,335
+Armorer,Yusup Tunyaz,Rare,Virtuoso,15,50,0,399,433,,,Alchemist,Adloquium,Epic,Dab Hand,20,-75,0,375,360
+Armorer,Dain Hephdal,Epic,Recycle,20,150,0,450,428,,,Alchemist,Paelinn Shardhilt,Epic,Recycle,20,-25,25,370,370
+Armorer,Elsbeth Missaglias,Epic,Recycle,25,125,-75,433,450,,,Alchemist,Efla Parkatha,Epic,Virtuoso,25,200,-25,395,395
+Armorer,Gurtid Staranvil,Epic,Virtuoso,25,25,-50,433,422,,,Alchemist,Zutto K'Lotha,Rare,Virtuoso,15,25,0,385,350
+Armorer,Silael Steelwhisper,Epic,Passion Project,25,175,125,405,444,,,Alchemist,Flug Tordbrin,Rare,Dab Hand,15,-25,0,385,340
+Armorer,Stogun Silverbeard,Epic,Miracle Worker,25,200,-25,444,444,,,Alchemist,Ross Silverhill,Rare,Virtuoso,20,25,25,385,345
+Armorer,Tomaso Missaglias,Epic,Dab Hand,25,100,100,388,450,,,Alchemist,Beatrice,Epic,Recycle,25,0,0,345,400
+Artificer,Alona Korinthil,Common,Miracle Worker,25,50,75,388,388,,,Armorer,Naera Amanodel,Rare,Passion Project,25,50,75,375,340
+Artificer,Boagran Mahola,Common,Passion Project,10,50,-50,433,388,,,Armorer,Enurai Anturiel,Common,Virtuoso,5,50,-25,360,360
+Artificer,Brodun Comawn,Common,Dab Hand,15,-50,75,383,383,,,Armorer,Bitrid Brasshammer,Common,Recycle,25,-75,0,340,340
+Artificer,Emilee Suntrot,Common,Virtuoso,10,-25,-25,360,439,,,Armorer,Torbryn Unker,Common,Miracle Worker,10,25,100,375,320
+Artificer,Janid Stolshore,Common,Recycle,5,75,-50,439,394,,,Armorer,Aynhild Rubystone,Rare,Miracle Worker,20,50,0,385,350
+Artificer,Jorgen Leventhen,Common,Virtuoso,5,150,-25,439,405,,,Armorer,Cord Brackman,Common,Recycle,10,25,-25,360,360
+Artificer,Kestrid Dawnshield,Common,Dab Hand,10,0,-50,433,377,,,Armorer,Jenifyr Liamnoen,Common,Passion Project,10,75,-25,345,385
+Artificer,Kevh Oleme,Common,Recycle,5,-25,0,405,394,,,Armorer,Erwan Laurent,Common,Virtuoso,10,25,-25,370,350
+Artificer,Strukkat Stephammer,Common,Recycle,10,50,-50,383,439,,,Armorer,Ulfred Gorheim,Rare,Passion Project,20,25,0,385,345
+Artificer,Yolen Nieldot,Common,Miracle Worker,20,0,0,394,394,,,Armorer,Oskar Danforge,Common,Miracle Worker,25,100,100,355,340
+Artificer,Belmen Ironarms,Rare,Virtuoso,10,50,-25,450,394,,,Armorer,Elsbeth Missaglias,Epic,Recycle,25,125,-75,385,400
+Artificer,Benedict Klaude,Rare,Recycle,5,75,-25,428,428,,,Armorer,Yulia Strauss,Common,Virtuoso,25,25,25,345,350
+Artificer,Brindi Goldsky,Rare,Dab Hand,20,-25,25,371,433,,,Armorer,Jane Silverhearth,Common,Recycle,5,-25,0,355,355
+Artificer,Corinn Maoi,Rare,Virtuoso,5,150,-50,439,439,,,Armorer,Stogun Silverbeard,Epic,Miracle Worker,25,200,-25,395,395
+Artificer,Ergon Senriver,Rare,Passion Project,20,0,50,360,444,,,Armorer,Storbek Ironfoot,Common,Dab Hand,10,25,0,370,345
+Artificer,Everyt Lathulien,Rare,Recycle,20,-25,0,433,377,,,Armorer,Dain Hephdal,Epic,Recycle,20,150,0,400,380
+Artificer,Eyla Gundman,Rare,Recycle,15,50,-50,405,439,,,Armorer,Eamhair Seaghdha,Rare,Recycle,10,50,0,370,375
+Artificer,Junne Nightbloom,Rare,Miracle Worker,20,75,150,439,360,,,Armorer,Enako Kadou,Rare,Passion Project,10,125,-50,380,390
+Artificer,Olfen Dunmar,Rare,Miracle Worker,25,25,25,433,377,,,Armorer,Dorfok Guggenston,Rare,Virtuoso,15,-25,0,385,340
+Artificer,Phelianna,Rare,Miracle Worker,25,200,75,422,383,,,Armorer,Silael Steelwhisper,Epic,Passion Project,25,175,125,360,395
+Artificer,Cogitation,Epic,Miracle Worker,25,150,-25,439,439,,,Armorer,Gurtid Staranvil,Epic,Virtuoso,25,25,-50,385,375
+Artificer,Dolben Lodestone,Epic,Passion Project,10,-25,75,383,450,,,Armorer,Mitra Lashgari,Rare,Virtuoso,5,0,0,390,350
+Artificer,Evelyn Chiaroscuro,Epic,Dab Hand,25,25,150,377,433,,,Armorer,Storborn Stonefist,Rare,Dab Hand,15,25,0,335,390
+Artificer,Gunter Morthrad,Epic,Dab Hand,20,100,0,416,450,,,Armorer,Bridgit Foucault,Rare,Dab Hand,20,75,25,355,380
+Artificer,Stella Everstream,Epic,Recycle,25,175,100,405,450,,,Armorer,Yusup Tunyaz,Rare,Virtuoso,15,50,0,355,385
+Artificer,Violet Laidyn,Epic,Virtuoso,10,125,-75,450,450,,,Armorer,Tomaso Missaglias,Epic,Dab Hand,25,100,100,345,400
+Blacksmith,Duginn Steepmountain,Common,Recycle,20,0,75,394,388,,,Artificer,Yolen Nieldot,Common,Miracle Worker,20,0,0,350,350
+Blacksmith,Eltrid Throunn,Common,Virtuoso,25,50,-25,371,428,,,Artificer,Benedict Klaude,Rare,Recycle,5,75,-25,380,380
+Blacksmith,Fionn Goel,Common,Miracle Worker,20,200,0,399,433,,,Artificer,Strukkat Stephammer,Common,Recycle,10,50,-50,340,390
+Blacksmith,Gront,Common,Passion Project,10,25,-50,439,377,,,Artificer,Phelianna,Rare,Miracle Worker,25,200,75,375,340
+Blacksmith,Jalal Rafgari,Common,Recycle,10,0,50,394,394,,,Artificer,Brindi Goldsky,Rare,Dab Hand,20,-25,25,330,385
+Blacksmith,Brynde Oakenhearth,Common,Miracle Worker,20,25,50,416,366,,,Artificer,Violet Laidyn,Epic,Virtuoso,10,125,-75,400,400
+Blacksmith,Marysa Greyshore,Common,Dab Hand,5,-25,0,399,399,,,Artificer,Eyla Gundman,Rare,Recycle,15,50,-50,360,390
+Blacksmith,Rinn Giroud,Common,Recycle,15,0,-25,422,377,,,Artificer,Cogitation,Epic,Miracle Worker,25,150,-25,390,390
+Blacksmith,Trodinn Deepstone,Common,Dab Hand,10,-25,-75,428,383,,,Artificer,Gunter Morthrad,Epic,Dab Hand,20,100,0,370,400
+Blacksmith,Veega,Common,Dab Hand,5,75,75,444,360,,,Artificer,Junne Nightbloom,Rare,Miracle Worker,20,75,150,390,320
+Blacksmith,Bortrich Kuldenn,Rare,Miracle Worker,15,100,25,422,416,,,Artificer,Belmen Ironarms,Rare,Virtuoso,10,50,-25,400,350
+Blacksmith,Donnen Millkeep,Rare,Recycle,15,-75,75,383,405,,,Artificer,Dolben Lodestone,Epic,Passion Project,10,-25,75,340,400
+Blacksmith,Elodie Devenport,Rare,Passion Project,10,0,0,394,433,,,Artificer,Corinn Maoi,Rare,Virtuoso,5,150,-50,390,390
+Blacksmith,Geralt Loahdben,Rare,Dab Hand,20,25,0,383,439,,,Artificer,Kevh Oleme,Common,Recycle,5,-25,0,360,350
+Blacksmith,Gohrr Kuldin,Rare,Dab Hand,25,0,0,450,360,,,Artificer,Janid Stolshore,Common,Recycle,5,75,-50,390,350
+Blacksmith,Izzal the Runaway,Rare,Recycle,20,125,-25,416,433,,,Artificer,Evelyn Chiaroscuro,Epic,Dab Hand,25,25,150,335,385
+Blacksmith,Liusaidh Ruaric,Rare,Dab Hand,20,50,0,450,377,,,Artificer,Kestrid Dawnshield,Common,Dab Hand,10,0,-50,385,335
+Blacksmith,Mayrunn Bronzefinger,Rare,Recycle,25,50,-50,405,428,,,Artificer,Boagran Mahola,Common,Passion Project,10,50,-50,385,345
+Blacksmith,Olibhia Highcreek,Rare,Miracle Worker,10,125,-50,428,439,,,Artificer,Olfen Dunmar,Rare,Miracle Worker,25,25,25,385,335
+Blacksmith,Stofen Xuleniir,Rare,Passion Project,15,50,25,433,394,,,Artificer,Ergon Senriver,Rare,Passion Project,20,0,50,320,395
+Blacksmith,Yaelyn Mitrliir,Rare,Virtuoso,20,25,-25,394,433,,,Artificer,Jorgen Leventhen,Common,Virtuoso,5,150,-25,390,360
+Blacksmith,Min Gan,Epic,Virtuoso,20,125,0,433,439,,,Artificer,Alona Korinthil,Common,Miracle Worker,25,50,75,345,345
+Blacksmith,Rudolph Wieland,Epic,Miracle Worker,10,150,-25,444,439,,,Artificer,Everyt Lathulien,Rare,Recycle,20,-25,0,385,335
+Blacksmith,Tia Ingelri,Epic,Passion Project,25,25,100,450,371,,,Artificer,Stella Everstream,Epic,Recycle,25,175,100,360,400
+Blacksmith,Tokuro Osafune,Epic,Recycle,25,100,25,405,450,,,Artificer,Brodun Comawn,Common,Dab Hand,15,-50,75,340,340
+Blacksmith,Ulfberht,Epic,Virtuoso,25,100,0,416,444,,,Artificer,Emilee Suntrot,Common,Virtuoso,10,-25,-25,320,390
+Blacksmith,Zinaida,Epic,Dab Hand,20,200,-50,450,450,,,Blacksmith,Eltrid Throunn,Common,Virtuoso,25,50,-25,330,380
+Jeweler,Boern Norrdal,Common,Miracle Worker,5,50,-50,433,394,,,Blacksmith,Fionn Goel,Common,Miracle Worker,20,200,0,355,385
+Jeweler,Bree Underleaf,Common,Dab Hand,15,-50,0,422,360,,,Blacksmith,Liusaidh Ruaric,Rare,Dab Hand,20,50,0,400,335
+Jeweler,Brenndan Qelgal,Common,Recycle,10,-25,-25,360,439,,,Blacksmith,Olibhia Highcreek,Rare,Miracle Worker,10,125,-50,380,390
+Jeweler,Haie Xilomne,Common,Passion Project,20,-75,75,377,377,,,Blacksmith,Gront,Common,Passion Project,10,25,-50,390,335
+Jeweler,Naidyn Emenshire,Common,Recycle,5,-25,0,405,394,,,Blacksmith,Gohrr Kuldin,Rare,Dab Hand,25,0,0,400,320
+Jeweler,Nasrii Zadan,Common,Virtuoso,10,50,-25,433,383,,,Blacksmith,Brynde Oakenhearth,Common,Miracle Worker,20,25,50,370,325
+Jeweler,Ned Stonebottom,Common,Dab Hand,5,25,-25,433,383,,,Blacksmith,Geralt Loahdben,Rare,Dab Hand,20,25,0,340,390
+Jeweler,Nifhild Amberbeard,Common,Passion Project,10,-25,-75,422,388,,,Blacksmith,Veega,Common,Dab Hand,5,75,75,395,320
+Jeweler,Saveed Al'Thabt,Common,Virtuoso,10,75,0,383,433,,,Blacksmith,Marysa Greyshore,Common,Dab Hand,5,-25,0,355,355
+Jeweler,Patime Hoshur,Common,Miracle Worker,20,0,100,383,383,,,Blacksmith,Stofen Xuleniir,Rare,Passion Project,15,50,25,385,350
+Jeweler,Aen Coppler,Rare,Virtuoso,5,100,-25,428,433,,,Blacksmith,Elodie Devenport,Rare,Passion Project,10,0,0,350,385
+Jeweler,Aiha Amaphilel,Rare,Miracle Worker,20,-75,125,371,371,,,Blacksmith,Donnen Millkeep,Rare,Recycle,15,-75,75,340,360
+Jeweler,Alyss Quorthlyn,Rare,Passion Project,15,75,-50,428,422,,,Blacksmith,Duginn Steepmountain,Common,Recycle,20,0,75,350,340
+Jeweler,Arrin Whistleleaf,Rare,Recycle,15,50,-25,439,399,,,Blacksmith,Rinn Giroud,Common,Recycle,15,0,-25,375,335
+Jeweler,Carazza Flaraalys,Rare,Virtuoso,15,125,0,383,439,,,Blacksmith,Trodinn Deepstone,Common,Dab Hand,10,-25,-75,380,340
+Jeweler,Eban Lodell,Rare,Recycle,15,25,25,411,411,,,Blacksmith,Mayrunn Bronzefinger,Rare,Recycle,25,50,-50,360,380
+Jeweler,Gerard t'Orryn,Rare,Miracle Worker,25,25,0,422,394,,,Blacksmith,Izzal the Runaway,Rare,Recycle,20,125,-25,370,385
+Jeweler,Rennet Brodau,Rare,Passion Project,15,150,-50,399,439,,,Blacksmith,Bortrich Kuldenn,Rare,Miracle Worker,15,100,25,375,370
+Jeweler,Silla Clearlake,Rare,Recycle,20,0,0,383,433,,,Blacksmith,Yaelyn Mitrliir,Rare,Virtuoso,20,25,-25,350,385
+Jeweler,Tresse Ambryn,Rare,Dab Hand,20,200,0,433,428,,,Blacksmith,Jalal Rafgari,Common,Recycle,10,0,50,350,350
+Jeweler,Charlette Favri,Epic,Recycle,25,125,0,416,450,,,Blacksmith,Tia Ingelri,Epic,Passion Project,25,25,100,400,330
+Jeweler,Halsstra T'Zovrrin,Epic,Miracle Worker,20,-25,125,405,405,,,Blacksmith,Tokuro Osafune,Epic,Recycle,25,100,25,360,400
+Jeweler,Olin Diamondeye,Epic,Recycle,10,75,0,444,428,,,Blacksmith,Min Gan,Epic,Virtuoso,20,125,0,385,390
+Jeweler,Pharlen Ghiberti,Epic,Miracle Worker,20,25,175,433,377,,,Blacksmith,Ulfberht,Epic,Virtuoso,25,100,0,370,395
+Jeweler,Tuala Uwoke,Epic,Dab Hand,20,100,0,433,433,,,Blacksmith,Rudolph Wieland,Epic,Miracle Worker,10,150,-25,395,390
+Jeweler,Volen Naimne,Epic,Virtuoso,25,25,75,377,450,,,Blacksmith,Zinaida,Epic,Dab Hand,20,200,-50,400,400
+Leatherworker,Aera Dornberg,Common,Dab Hand,10,0,-50,433,377,,,Leatherworker,Sandurai Astemmdal,Rare,Recycle,25,0,0,400,320
+Leatherworker,Bentten Jokkard,Common,Passion Project,15,0,0,377,416,,,Leatherworker,Nort Mintmountain,Common,Virtuoso,10,50,0,330,390
+Leatherworker,Brenna Olem,Common,Recycle,5,-25,0,399,399,,,Leatherworker,Fen Winterfield,Common,Miracle Worker,20,-50,0,345,345
+Leatherworker,Fen Winterfield,Common,Miracle Worker,20,-50,0,388,388,,,Leatherworker,Mella Brightshore,Common,Virtuoso,10,50,-50,385,345
+Leatherworker,Jaqueyn Locel,Common,Miracle Worker,25,0,50,388,383,,,Leatherworker,Jaqueyn Locel,Common,Miracle Worker,25,0,50,345,340
+Leatherworker,Mella Brightshore,Common,Virtuoso,10,50,-50,433,388,,,Leatherworker,Emendel Incesu,Rare,Virtuoso,10,175,-50,390,390
+Leatherworker,Nort Mintmountain,Common,Virtuoso,10,50,0,371,439,,,Leatherworker,Bentten Jokkard,Common,Passion Project,15,0,0,335,370
+Leatherworker,Saera Ourynn,Common,Recycle,25,-25,-25,388,394,,,Leatherworker,Bhatair Auchald,Rare,Recycle,15,0,50,360,360
+Leatherworker,Sundien Nodariel,Common,Recycle,10,-25,-75,405,405,,,Leatherworker,Alma Greydawn,Epic,Virtuoso,25,200,200,320,400
+Leatherworker,Tristoph Galvaan,Common,Passion Project,10,50,25,428,377,,,Leatherworker,Saera Ourynn,Common,Recycle,25,-25,-25,345,350
+Leatherworker,Bhatair Auchald,Rare,Recycle,15,0,50,405,405,,,Leatherworker,Tristoph Galvaan,Common,Passion Project,10,50,25,380,335
+Leatherworker,Blenha Strozzck,Rare,Miracle Worker,25,0,50,360,439,,,Leatherworker,Krassyk,Rare,Dab Hand,25,-25,-25,390,330
+Leatherworker,Corriel Ourman,Rare,Passion Project,5,75,-50,428,433,,,Leatherworker,Sundien Nodariel,Common,Recycle,10,-25,-75,360,360
+Leatherworker,Emendel Incesu,Rare,Virtuoso,10,175,-50,439,439,,,Leatherworker,Aera Dornberg,Common,Dab Hand,10,0,-50,385,335
+Leatherworker,Emlyn Feststone,Rare,Recycle,20,-25,-25,388,439,,,Leatherworker,Jalaj Das,Rare,Passion Project,25,0,-25,340,385
+Leatherworker,Jalaj Das,Rare,Passion Project,25,0,-25,383,433,,,Leatherworker,Blenha Strozzck,Rare,Miracle Worker,25,0,50,320,390
+Leatherworker,Krassyk,Rare,Dab Hand,25,-25,-25,439,371,,,Leatherworker,Nona Grassheart,Rare,Dab Hand,20,50,0,390,345
+Leatherworker,Lia Stengrat,Rare,Virtuoso,20,75,0,405,428,,,Leatherworker,Brenna Olem,Common,Recycle,5,-25,0,355,355
+Leatherworker,Nona Grassheart,Rare,Dab Hand,20,50,0,439,388,,,Leatherworker,Brokkah,Epic,Miracle Worker,15,-75,100,400,320
+Leatherworker,Sandurai Astemmdal,Rare,Recycle,25,0,0,450,360,,,Leatherworker,Lia Stengrat,Rare,Virtuoso,20,75,0,360,380
+Leatherworker,Alma Greydawn,Epic,Virtuoso,25,200,200,360,450,,,Leatherworker,Oteyu N'Mab,Epic,Miracle Worker,25,100,100,345,400
+Leatherworker,Brokkah,Epic,Miracle Worker,15,-75,100,450,360,,,Leatherworker,Emlyn Feststone,Rare,Recycle,20,-25,-25,345,390
+Leatherworker,Fenka Sturmdottir,Epic,Passion Project,10,75,-75,444,444,,,Leatherworker,Corriel Ourman,Rare,Passion Project,5,75,-50,380,385
+Leatherworker,Lond Dawnwhisper,Epic,Dab Hand,25,75,0,428,428,,,Leatherworker,Yul Summerstar,Epic,Recycle,25,75,0,360,400
+Leatherworker,Oteyu N'Mab,Epic,Miracle Worker,25,100,100,388,450,,,Leatherworker,Fenka Sturmdottir,Epic,Passion Project,10,75,-75,395,395
+Leatherworker,Yul Summerstar,Epic,Recycle,25,75,0,405,450,,,Leatherworker,Lond Dawnwhisper,Epic,Dab Hand,25,75,0,380,380
+Tailor,Berg Donatan,Common,Virtuoso,25,50,0,371,422,,,Tailor,Sezzra D'rrol,Rare,Virtuoso,10,25,0,400,340
+Tailor,Eccla Northgrace,Common,Passion Project,15,0,0,383,411,,,Tailor,Eccla Northgrace,Common,Passion Project,15,0,0,340,365
+Tailor,Estel Tomme,Common,Virtuoso,5,75,-25,388,439,,,Tailor,Inaya Lanuit,Epic,Miracle Worker,25,50,200,395,320
+Tailor,Hem Samthiel,Common,Miracle Worker,10,75,-50,388,439,,,Tailor,Norma Otharda,Common,Dab Hand,10,50,0,390,330
+Tailor,Jen Grasshill,Common,Recycle,20,25,-25,433,366,,,Tailor,Jen Grasshill,Common,Recycle,20,25,-25,385,325
+Tailor,Lazzag Z'Rozze,Common,Virtuoso,10,-25,75,388,388,,,Tailor,Edward Nublann,Rare,Dab Hand,10,25,50,360,370
+Tailor,Mendo Norende,Common,Recycle,10,25,-25,428,383,,,Tailor,Mendo Norende,Common,Recycle,10,25,-25,380,340
+Tailor,Nona Kalimda,Common,Recycle,5,-25,-25,399,405,,,Tailor,Berg Donatan,Common,Virtuoso,25,50,0,330,375
+Tailor,Norma Otharda,Common,Dab Hand,10,50,0,439,371,,,Tailor,Ord Silverpinch,Common,Recycle,5,150,-75,380,380
+Tailor,Ord Silverpinch,Common,Recycle,5,150,-75,428,428,,,Tailor,Estel Tomme,Common,Virtuoso,5,75,-25,345,390
+Tailor,Edward Nublann,Rare,Dab Hand,10,25,50,405,416,,,Tailor,Lazzag Z'Rozze,Common,Virtuoso,10,-25,75,345,345
+Tailor,Ekkla,Rare,Recycle,5,100,-50,428,439,,,Tailor,Nona Kalimda,Common,Recycle,5,-25,-25,355,360
+Tailor,Evan Mintbottom,Rare,Miracle Worker,15,50,0,416,416,,,Tailor,Hem Samthiel,Common,Miracle Worker,10,75,-50,345,390
+Tailor,Fenna Darkmoon,Rare,Dab Hand,20,50,125,428,371,,,Tailor,Fenna Darkmoon,Rare,Dab Hand,20,50,125,380,330
+Tailor,Lem Eastgrass,Rare,Passion Project,20,50,-50,399,439,,,Tailor,Ekkla,Rare,Recycle,5,100,-50,380,390
+Tailor,Leyrah Olme,Rare,Miracle Worker,20,-25,0,371,439,,,Tailor,Evan Mintbottom,Rare,Miracle Worker,15,50,0,370,370
+Tailor,Longelen Ortuliel,Rare,Virtuoso,10,50,0,399,439,,,Tailor,Sey Mapleway,Rare,Dab Hand,15,0,0,400,330
+Tailor,Sey Mapleway,Rare,Dab Hand,15,0,0,450,371,,,Tailor,Treylo Grassmantle,Rare,Passion Project,10,-75,0,355,365
+Tailor,Sezzra D'rrol,Rare,Virtuoso,10,25,0,450,383,,,Tailor,Clefra Niyelyn,Epic,Virtuoso,25,200,50,375,400
+Tailor,Treylo Grassmantle,Rare,Passion Project,10,-75,0,399,411,,,Tailor,Yeul Gustaverg,Epic,Dab Hand,25,75,0,390,370
+Tailor,Clefra Niyelyn,Epic,Virtuoso,25,200,50,422,450,,,Tailor,Longelen Ortuliel,Rare,Virtuoso,10,50,0,355,390
+Tailor,Emmet Crocha,Epic,Miracle Worker,20,125,-25,439,439,,,Tailor,Leyrah Olme,Rare,Miracle Worker,20,-25,0,330,390
+Tailor,Inaya Lanuit,Epic,Miracle Worker,25,50,200,444,360,,,Tailor,Isayel Kostrad,Epic,Passion Project,20,0,-50,360,400
+Tailor,Isayel Kostrad,Epic,Passion Project,20,0,-50,405,450,,,Tailor,Lem Eastgrass,Rare,Passion Project,20,50,-50,355,390
+Tailor,Teclel Jondrathal,Epic,Recycle,25,200,-75,450,450,,,Tailor,Emmet Crocha,Epic,Miracle Worker,20,125,-25,390,390
+Tailor,Yeul Gustaverg,Epic,Dab Hand,25,75,0,439,416,,,Tailor,Teclel Jondrathal,Epic,Recycle,25,200,-75,400,400
+Any,Karmela Valeri,Epic,Passion Project,25,0,0,433,433,,,,,,,,,,,
