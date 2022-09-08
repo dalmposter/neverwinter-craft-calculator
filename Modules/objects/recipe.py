@@ -41,7 +41,8 @@ class Tool():
             ability_str = f" {self.recycle_chance}r"
         else:
             ability_str = ""
-        return f"{self.name} ({int(self.proficiency)}/{int(self.focus)}{ability_str})"
+        return f"{self.name}"
+        #return f"{self.name} ({int(self.proficiency)}/{int(self.focus)}{ability_str})"
 
 class Artisan():
     
@@ -190,6 +191,10 @@ class MWRecipe:
         self.supplements: Recipe = []
         self.supplement_materials: Recipe = [] #TODO: Replace this with cost of supplements
         self.high_quality: bool = high_quality
+        self.failures: float = None
+        self.normal_results: float = None
+        self.high_quality_results: float = None
+        self.attempts: float = None
     
     def get_cost(self) -> float:
         cost: float = 0.0
@@ -242,6 +247,7 @@ class MWRecipe:
         print(f"\n{self.result.name}{' +1' if self.high_quality else ''}")
         print("------------------------------------------------------------------------------------------------------------------------------------------------")
         print(f"{self.artisan.pretty_print()} + {self.tool.pretty_print()} + {self.supplement.pretty_print()}")
+        print(f"{self.attempts} Attempts, {self.normal_results} Normal Results, {self.high_quality_results} High Quality Results")
         print("\nMaterials used:")
         cost: float = 0.0
         for entry in self.materials:

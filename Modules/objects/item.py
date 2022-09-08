@@ -1,9 +1,7 @@
 from __future__ import annotations
 from abc import ABCMeta, abstractclassmethod, abstractmethod
-from copy import deepcopy
 import csv
 import logging
-from random import random, seed
 from threading import Lock, Thread
 from typing import List, Dict, Tuple
 
@@ -11,7 +9,6 @@ from Modules.constants import ARTISAN_TYPES, FOCUS_MULTIPLIER, PROFESSIONS, Reci
 import Modules.objects.recipe as recipe
 from Modules.util import aggregate_tuple_lists, find_mw_object
 
-seed(1)
 logger = logging.getLogger(__name__)
 
 class MWObject(metaclass=ABCMeta):
@@ -170,7 +167,6 @@ class MWItem(MWObject):
         if artisan is None and tool is None and supplement is None:
             optimal_recipe = self.get_optimal_recipe(high_quality)
             return optimal_recipe.multiply(quantity)
-        rand = random()
         output = super().craft(artisan, tool, supplement, quantity, high_quality)
         
         success_chance = (artisan.proficiency + tool.proficiency + supplement.proficiency)/self.proficiency
@@ -182,16 +178,21 @@ class MWItem(MWObject):
         recycle_chance = artisan.recycle_chance + supplement.recycle_chance
         dab_hand_chance = artisan.dab_hand_chance + supplement.dab_hand_chance
     
-        expected_attempts = 1/success_chance
-        normal_multiplier = (1 + ((expected_attempts - 1) * (1-recycle_chance)))
+        # Calculate expected number of attempts to get a success of any quality
+        expected_attempts_any_quality = 1 / success_chance
+        # Calculate cost multiplier factoring in recycle chance
+        quantity_multiplier = (1 + ((expected_attempts_any_quality - 1) * (1 - recycle_chance)))
+        
         if self.can_dab_hand:
             # If the recipe can dab hand divide the cost multiplier appropriately
-            normal_multiplier = normal_multiplier/(1+dab_hand_chance)
-        high_quality_multiplier = normal_multiplier / high_quality_chance
-        
-        quantity_multiplier: float = normal_multiplier
+            quantity_multiplier = quantity_multiplier / (1+dab_hand_chance)
+            
+        expected_attempts = expected_attempts_any_quality
         if high_quality:
-            quantity_multiplier = high_quality_multiplier
+            # If we're crafting +1 version, divide multiplier by +1 chance
+            quantity_multiplier = quantity_multiplier / high_quality_chance
+            expected_attempts = expected_attempts / high_quality_chance
+        # Adjust multiplier based on quantity to craft and quantity output by the recipe
         quantity_multiplier = quantity_multiplier * quantity / self.quantity
 
         # Start with the supplements needed for final craft
@@ -222,6 +223,13 @@ class MWItem(MWObject):
             aggregate_tuple_lists(output.supplement_materials, this_output.materials)
         
         #print(f"[{rand}]: Summed supplements for {quantity} quantity {output.supplements}: {output.supplement_materials}")
+        
+        # Add meta-data to recipe
+        output.attempts = expected_attempts
+        output.failures = expected_attempts * (1-success_chance)
+        output.normal_results = expected_attempts * (success_chance * (1-high_quality_chance))
+        output.high_quality_results = expected_attempts * (success_chance * high_quality_chance)
+        
         return output
     
     def craft_by_stats(self, quantity: float = 1, success_chance: float = 1,
