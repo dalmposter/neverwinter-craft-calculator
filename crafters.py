@@ -30,10 +30,7 @@ def calculate_multiplier(artisan: Artisan, tool: Tool, supplement: Supplement,
     TOOL_PROFICIENCY = tool.proficiency
     TOOL_FOCUS = tool.focus
     success_chance = (artisan.proficiency + TOOL_PROFICIENCY + supplement.proficiency)/PROFICIENCY_REQUIREMENT # Rigged for 1400 max only
-    high_quality_chance_old = max(artisan.focus + TOOL_FOCUS + supplement.focus - 971, 0.0001) * 0.002325 # Rigged for 1400 max only
-    high_quality_chance = max(1 - (FOCUS_MULTIPLIER * max(FOCUS_REQUIREMENT - artisan.focus - 600 - supplement.focus, 0)), 0.0001) # rigged for 1400 max only
-    recycle_chance_multi_stacking = 1 - ((1-artisan.recycle_chance) * (1-supplement.recycle_chance))
-    dab_hand_chance_multi_stacking = 1 - ((1-artisan.dab_hand_chance) * (1-supplement.dab_hand_chance))
+    high_quality_chance = max(1 - (FOCUS_MULTIPLIER * (FOCUS_REQUIREMENT - artisan.focus - 600 - supplement.focus)), 0.0001) # rigged for 1400 max only
     recycle_chance = artisan.recycle_chance + supplement.recycle_chance
     dab_hand_chance = artisan.dab_hand_chance + supplement.dab_hand_chance
     if not can_dab_hand:

@@ -109,16 +109,17 @@ class MWItem(MWObject):
                 cls.OBJECTS[new_item.name] = MWItem(current_item)
     
     def get_optimal_recipes(self, high_quality) -> List[Tuple[recipe.MWRecipe, float]]:
+        RECIPE_QUANTITY = 10
         if high_quality and self.hq_optimal_recipes is not None:
-            return self.hq_optimal_recipes[:10]
+            return self.hq_optimal_recipes[:RECIPE_QUANTITY]
         if not high_quality and self.optimal_recipes is not None:
-            return self.optimal_recipes[:10]
+            return self.optimal_recipes[:RECIPE_QUANTITY]
         else:
             self.get_optimal_recipe(high_quality)
             if high_quality:
-                return self.hq_optimal_recipes[:10]
+                return self.hq_optimal_recipes[:RECIPE_QUANTITY]
             else:
-                return self.optimal_recipes[:10]
+                return self.optimal_recipes[:RECIPE_QUANTITY]
     
     def get_optimal_recipe(self, high_quality) -> recipe.MWRecipe:
         with self.lock:
@@ -173,9 +174,10 @@ class MWItem(MWObject):
         output = super().craft(artisan, tool, supplement, quantity, high_quality)
         
         success_chance = (artisan.proficiency + tool.proficiency + supplement.proficiency)/self.proficiency
+        focus_differential = self.focus - artisan.focus - tool.proficiency - supplement.focus
         high_quality_chance = max(
-            1 - (FOCUS_MULTIPLIER * max(self.focus - artisan.focus - 600 - supplement.focus, 0)),
-            0
+            1 - (FOCUS_MULTIPLIER * focus_differential),
+            0.0000001
         )
         recycle_chance = artisan.recycle_chance + supplement.recycle_chance
         dab_hand_chance = artisan.dab_hand_chance + supplement.dab_hand_chance

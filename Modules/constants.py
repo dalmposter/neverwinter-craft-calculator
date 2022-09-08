@@ -20,7 +20,7 @@ ARTISAN_TYPES = {
     "Tailoring": "Tailor"
 }
 
-FOCUS_MULTIPLIER = 0.0022
+FOCUS_MULTIPLIER = 1/430
 
 Recipe = List[Tuple[float, str]]
 """A list of objects and the quantity required."""
