@@ -41,45 +41,8 @@ class Tool():
             ability_str = f" {self.recycle_chance}r"
         else:
             ability_str = ""
-        return f"{self.name}"
-        #return f"{self.name} ({int(self.proficiency)}/{int(self.focus)}{ability_str})"
+        return f"{self.name} ({int(self.proficiency)}/{int(self.focus)}{ability_str})"
 
-class Artisan():
-    
-    OBJECTS: Dict[str, List["Artisan"]] = {}
-    
-    def __init__(self, data: List[str]):
-        super().__init__()
-        self.profession = data[0]
-        self.name = data[1]
-        self.rarity = data[2]
-        self.dab_hand_chance = float(data[4]) / 100 if data[3] == "Dab Hand" else 0
-        self.recycle_chance = float(data[4]) / 100 if data[3] == "Recycle" else 0
-        self.proficiency = float(data[7])
-        self.focus = float(data[8])
-    
-    @classmethod
-    def load_csv(cls, file_loc):
-        cls.OBJECTS = {}
-        with open(file_loc) as f:
-            csvreader = csv.reader(f)
-            header = next(csvreader)
-            for row in csvreader:
-                new_artisan = Artisan(row)
-                if new_artisan.profession in cls.OBJECTS:
-                    cls.OBJECTS[new_artisan.profession].append(new_artisan)
-                else:
-                    cls.OBJECTS[new_artisan.profession] = [new_artisan]
-    
-    def pretty_print(self):
-        if self.dab_hand_chance > 0:
-            artisan_ability_str = f" {self.dab_hand_chance}d"
-        elif self.recycle_chance > 0:
-            artisan_ability_str = f" {self.recycle_chance}r"
-        else:
-            artisan_ability_str = ""
-        return f"{self.name} [{self.rarity}] ({int(self.proficiency)}/{int(self.focus)}{artisan_ability_str})"
-    
 class Supplement():
     
     OBJECTS: Dict[str, "Supplement"] = {}
@@ -145,7 +108,16 @@ class Supplement():
 
 class Artisan():
     
-    OBJECTS: Dict[str, List["Artisan"]] = {}
+    OBJECTS: Dict[str, List["Artisan"]] =  {
+        "Adventurer": [],
+        "Alchemist": [],
+        "Armorer": [],
+        "Artificer": [],
+        "Blacksmith": [],
+        "Jeweler": [],
+        "Leatherworker": [],
+        "Tailor": []
+    }
     
     def __init__(self, data: List[str]):
         super().__init__()
@@ -165,7 +137,10 @@ class Artisan():
             header = next(csvreader)
             for row in csvreader:
                 new_artisan = Artisan(row)
-                if new_artisan.profession in cls.OBJECTS:
+                if new_artisan.profession == "Any":
+                    for key in cls.OBJECTS.keys():
+                        cls.OBJECTS[key].append(new_artisan)
+                elif new_artisan.profession in cls.OBJECTS:
                     cls.OBJECTS[new_artisan.profession].append(new_artisan)
                 else:
                     cls.OBJECTS[new_artisan.profession] = [new_artisan]
@@ -238,31 +213,31 @@ class MWRecipe:
         input[0][0].pretty_print()
         print("------------------------------------------------------------------------------------------------------------------------------------------------")
         for recipe_rank in input:
-            print(f"{'{:,}'.format(round(recipe_rank[1]))} AD: {recipe_rank[0].result.name}: {recipe_rank[0].artisan.pretty_print()} + {recipe_rank[0].tool.pretty_print()} + {recipe_rank[0].supplement.pretty_print()}")
+            print(f"{'{:,}'.format(round(recipe_rank[1]))} AD ({round(recipe_rank[0].normal_results, 2)} Normal, {round(recipe_rank[0].high_quality_results, 2)} +1): {recipe_rank[0].artisan.pretty_print()} + {recipe_rank[0].supplement.pretty_print()}")
     
     def quick_print(self):
-        print(f"\n{self.result.name}: {self.artisan.pretty_print()} + {self.tool.pretty_print()} + {self.supplement.pretty_print()}")
+        print(f"\n{self.result.name}: {self.artisan.pretty_print()} + {self.supplement.pretty_print()}")
     
     def pretty_print(self):
         print(f"\n{self.result.name}{' +1' if self.high_quality else ''}")
         print("------------------------------------------------------------------------------------------------------------------------------------------------")
-        print(f"{self.artisan.pretty_print()} + {self.tool.pretty_print()} + {self.supplement.pretty_print()}")
-        print(f"{self.attempts} Attempts, {self.normal_results} Normal Results, {self.high_quality_results} High Quality Results")
+        print(f"{self.artisan.pretty_print()} + {self.supplement.pretty_print()} : {round(self.attempts, 2)} Attempts")
+        print(f"{round(self.failures, 2)} Failures, {round(self.normal_results, 2)} Normal Results, {round(self.high_quality_results, 2)} High Quality Results")
         print("\nMaterials used:")
         cost: float = 0.0
         for entry in self.materials:
-            rounded_quantity = round(entry[0], 1)
+            rounded_quantity = round(entry[0], 2)
             print(f"  {rounded_quantity}x {entry[1]}")
             cost += entry[0] * find_mw_object(entry[1]).price
         print(f"Material AD cost: {'{:,}'.format(round(cost))}")
         print(f"\nSupplements used:")
         for supplement_entry in self.supplements:
-            rounded_quantity = round(supplement_entry[0], 1)
+            rounded_quantity = round(supplement_entry[0], 2)
             print(f"  {rounded_quantity}x {supplement_entry[1]}")
         supplement_cost: float = 0.0
         print(f"Materials consumed by supplements:")
         for supplement_mat_entry in self.supplement_materials:
-            rounded_quantity = round(supplement_mat_entry[0], 1)
+            rounded_quantity = round(supplement_mat_entry[0], 2)
             print(f"  {rounded_quantity}x {supplement_mat_entry[1]}")
             supplement_cost += supplement_mat_entry[0] * find_mw_object(supplement_mat_entry[1]).price
         print(f"Supplement AD cost: {'{:,}'.format(round(supplement_cost))}")

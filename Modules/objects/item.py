@@ -72,6 +72,7 @@ class MWItem(MWObject):
             quantity = float(row[3][:-1])
             item_name = row[4]
             self.recipe.append([quantity, item_name])
+        #self.commission: float = float(data[0][16])
         
         self.optimal_recipes: List[Tuple[recipe.MWRecipe, float]] = None
         self.hq_optimal_recipes: List[Tuple[recipe.MWRecipe, float]] = None
@@ -175,21 +176,23 @@ class MWItem(MWObject):
             1 - (FOCUS_MULTIPLIER * focus_differential),
             0.0000001
         )
-        recycle_chance = artisan.recycle_chance + supplement.recycle_chance
-        dab_hand_chance = artisan.dab_hand_chance + supplement.dab_hand_chance
+        recycle_chance = 1 - ((1-artisan.recycle_chance) * (1-supplement.recycle_chance) * (1-tool.recycle_chance))
+        dab_hand_chance = 1 - ((1-artisan.dab_hand_chance) * (1-supplement.dab_hand_chance) * (1-tool.recycle_chance))
     
         # Calculate expected number of attempts to get a success of any quality
-        expected_attempts_any_quality = 1 / success_chance
-        # Calculate cost multiplier factoring in recycle chance
-        quantity_multiplier = (1 + ((expected_attempts_any_quality - 1) * (1 - recycle_chance)))
+        expected_attempts = 1 / success_chance
         
         if self.can_dab_hand:
-            # If the recipe can dab hand divide the cost multiplier appropriately
-            quantity_multiplier = quantity_multiplier / (1+dab_hand_chance)
+            # If the recipe can dab hand divide the expected attempts appropriately
+            expected_attempts = expected_attempts / (1+dab_hand_chance)
             
-        expected_attempts = expected_attempts_any_quality
+        # Calculate cost multiplier factoring in recycle chance
+        quantity_multiplier = (1 + ((expected_attempts - 1) * (1 - recycle_chance)))
+        
         if high_quality:
             # If we're crafting +1 version, divide multiplier by +1 chance
+            # This must be done after calculating quantity multiplier
+            # because you can only recycle actual failures, not normal results
             quantity_multiplier = quantity_multiplier / high_quality_chance
             expected_attempts = expected_attempts / high_quality_chance
         # Adjust multiplier based on quantity to craft and quantity output by the recipe
