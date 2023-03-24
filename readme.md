@@ -70,11 +70,13 @@ Total AD cost: 6,541,998
 
 As you can see it has highlighted the most cost effective way to craft the item and given a breakdown of the materials needed (on average). Then a summary of the top 10 combos are listed. This is useful if you lack some Artisans or Supplements. For the best recipe it gives the expected number of attempts, failures, normal outputs and high quality outputs. This is all based on averages so this is not the minimum or maximum cost for crafting an item, it is the **average** cost to make the inputted item.
 
-You can tell it you want to craft a high quality item by putting +1 after the item name, as shown. When crafting a high quality item it assumes you want to receive 1 high quality version of the item so the cost listed includes all attempts needed (on average) to get 1 +1 output. The expected amount of normal outputs is listed as a side-effect (this is generally around 1).
+You can tell it you want to craft a high quality item by putting +1 after the item name, as shown. When crafting a high quality item it assumes you want to receive 1 high quality version of the item so the cost listed includes all attempts needed (on average) to get 1 +1 output. The expected amount of normal outputs is listed as a side-effect (this is generally around 1). Therefore the printed cost for a +1 item also includes about 1 normal quality version as well. The script makes no attempt to distribute the cost between them, that ratio is determined by the market. The normal quality outputs are considered free and unwanted bi-products. As a crafter this could essentially be your profit margin if you charged the printed price (also factor in AH fees). But due to the random nature of crafting it may be necessary to charge more to mitigate potential losses from bad RNG.
 
 When you tell it to craft a normal quality item it will also consider a +1 result acceptable so the listed cost covers the expected number of attempts to get a successful craft, regardless of quality. It will list the chance to get a normal or +1 in this case.
 
-Please note that the inputted item name must match exactly the name of the item in-game (including capitalisation and any special characters like apostrophes). I've been too lazy to change this but if you want to modify this behaviour I will accept PRs :)
+**Please note that the inputted item name must match exactly the name of the item in-game (including capitalisation and any special characters like apostrophes). I've been too lazy to change this but if you want to modify this behaviour I will accept PRs :)**
+
+To crafters: even if you want a normal quality item, I suggest using the recommended combo for the high quality version. Simply sell any high quality outputs you get.
 
 
 # Commission Calculator
