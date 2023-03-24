@@ -90,3 +90,9 @@ and it will print to the console the top 10 commission items to craft as defined
 
 ## Crafters
 crafters.py was my initial attempt at a crafting calculator but it simply told you the costs of using a given combination/stats. calculator.py is much better, it works out the best way for you.
+
+## TODO
+- Calculate gold cost for crafting items and include it in overall cost with a gold : AD input cost
+- Calculate cost to craft an item using a specific combination of artisan/tool/supplement. This is currently possible internally, it is just not currently possible via command line input.
+- Make it less picky with input (accept any capitalisation, ignore special characters, disregard whitespace)
+- Refactor the input CSVs to be more readable directly (they are exports from google sheets, you may be able to import them to google sheets to read them more easily?)
