@@ -2,6 +2,10 @@
 
 Tool for calculating masterwork crafting costs in Neverwinter, the D&D MMO.
 
+Written using Python 3.10.4
+
+Requires Python to be installed to run. Run from a terminal following instructions below.
+
 The various scripts rely on the Input directory which contain CSV exports from Rainer's masterwork reference spreadsheets which can be found for free in read-only format on his Patreon https://www.patreon.com/RainerNW (Thank you Rainer for your amazing Neverwinter content!). Update the values contained in these CSVs to be consistent with current AH prices on your platform.
 
 The Modules directory contains the main codebase. They contain classes representing everything involved in the crafting process. This is essentially the library for the scripts.
