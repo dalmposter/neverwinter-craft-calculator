@@ -12,6 +12,10 @@ from Modules.util import aggregate_tuple_lists, find_mw_object
 logger = logging.getLogger(__name__)
 
 class MWObject(metaclass=ABCMeta):
+    """A generic Masterwork object.
+    
+    Could represent a resource, material, or item.
+    """
     
     OBJECTS: Dict[str, "MWObject"] = {}
     
@@ -19,7 +23,6 @@ class MWObject(metaclass=ABCMeta):
         self.name: str = None
         self.price: float = None
     
-    """A generic object."""
     @abstractclassmethod
     def load_csv(cls):
         """Load the list of this classes objects from a CSV file."""
@@ -106,8 +109,15 @@ class MWItem(MWObject):
                 new_item = MWItem(current_item)
                 cls.OBJECTS[new_item.name] = MWItem(current_item)
     
-    def get_optimal_recipes(self, high_quality) -> List[Tuple[recipe.MWRecipe, float]]:
+    def get_optimal_recipes(self, high_quality: bool) -> List[Tuple[recipe.MWRecipe, float]]:
+        """
+        Calculate the most cost effective setup for crafting this item.
+        
+        Returns:
+            List[Tuple[MWRecipe, float]]: A list of the top recipes and their overall cost.
+        """
         RECIPE_QUANTITY = 10
+        """Quantity of recipes to output. Default: Top 10."""
         if high_quality and self.hq_optimal_recipes is not None:
             return self.hq_optimal_recipes[:RECIPE_QUANTITY]
         if not high_quality and self.optimal_recipes is not None:
@@ -119,8 +129,21 @@ class MWItem(MWObject):
             else:
                 return self.optimal_recipes[:RECIPE_QUANTITY]
     
-    def get_optimal_recipe(self, high_quality) -> recipe.MWRecipe:
+    def get_optimal_recipe(self, high_quality: bool) -> recipe.MWRecipe:
+        """
+        Determine the optimal setup for crafting this item.
+        
+        Attempt to craft this item with every known combination of artisan, tool and
+        supplement. Then rank the results by lowest cost.
+        In the process it will also calculate the optimal recipe for all required
+        materials, and use the best one in calculating this recipe.
+        
+        Returns:
+            MWRecipe: A recipe representing the setup used and material cost to craft this.
+        """
         with self.lock:
+            # First check if we already calculated the optimal recipes for this item
+            # To prevent massive runtimes we cache the best recipes once calculated.
             if high_quality and self.hq_optimal_recipes is not None:
                 return self.hq_optimal_recipes[0][0]
             if not high_quality and self.optimal_recipes is not None:
@@ -137,6 +160,7 @@ class MWItem(MWObject):
                 threads: List[Thread] = []
                 # Define function for threads to execute
                 def add_craft_to_list(artisan, tool, supplement, quantity, hq):
+                    """Craft self with the given setup and append to the output list."""
                     new_recipe = self.craft(artisan, tool, supplement, quantity, hq)
                     ranking_list.append([new_recipe, new_recipe.get_cost()])
                 for artisan in artisans:
@@ -165,6 +189,14 @@ class MWItem(MWObject):
     def craft(self, artisan: recipe.Artisan = None, tool: recipe.Tool = None,
               supplement: recipe.Supplement = None,
               quantity: float = 1, high_quality: bool = False) -> recipe.MWRecipe:
+        """
+        Craft a given quantity of this item using the given artisan, tool and supplement.
+        
+        If no setup is provided, it will instead return the optimal recipe for this item.
+        
+        Returns:
+            MWRecipe: A recipe representing the setup and cost to craft this item.
+        """
         if artisan is None and tool is None and supplement is None:
             optimal_recipe = self.get_optimal_recipe(high_quality)
             return optimal_recipe.multiply(quantity)
@@ -230,8 +262,8 @@ class MWItem(MWObject):
         # Add meta-data to recipe
         output.attempts = expected_attempts
         output.failures = expected_attempts * (1-success_chance)
-        output.normal_results = expected_attempts * (success_chance * (1-high_quality_chance))
-        output.high_quality_results = expected_attempts * (success_chance * high_quality_chance)
+        output.normal_results = expected_attempts * (success_chance * (1-high_quality_chance)) * (1+dab_hand_chance)
+        output.high_quality_results = expected_attempts * (success_chance * high_quality_chance) * (1+dab_hand_chance)
         
         return output
     
@@ -239,6 +271,14 @@ class MWItem(MWObject):
               dab_chance: float = 0, recycle_chance: float = 0,
               auxillary_success_chance: float = None,
               auxillary_dab_chance: float = None, auxillary_recycle_chance:float = None) -> Recipe:
+        """
+        Deprecated function.
+        
+        Returns the result of crafting this item with fixed stats.
+        
+        Returns:
+            Recipe: The list of materials used to craft this item.
+        """
         # Auxillary chances used to craft previous items in the chain
         # Default to given chances for this craft if not present
         if auxillary_success_chance is None:
@@ -274,6 +314,7 @@ class MWItem(MWObject):
         return output
 
 class MWResource(MWObject):
+    """A raw material used in crafting."""
     
     OBJECTS: Dict[str, "MWResource"] = {}
     
@@ -317,6 +358,7 @@ class MWResource(MWObject):
         return [[quantity, self.name]]
 
 class CommissionItem():
+    """A crafted item requested by Stryker Bronzepin/"""
     
     OBJECTS: Dict[str, "CommissionItem"] = {}
     

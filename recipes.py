@@ -1,3 +1,10 @@
+"""
+Prototype cost calculating script.
+
+Takes as input the chances involved and calculates the cost to craft.
+Superceded by calculator.py
+"""
+
 import os
 import logging
 from Modules.objects.recipe import *

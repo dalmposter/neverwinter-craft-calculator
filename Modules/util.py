@@ -8,6 +8,18 @@ import Modules.objects.item as item
 logger = logging.getLogger(__name__)
 
 def find_mw_object(name: str, assume_resource: bool = True) -> "item.MWObject":
+    """
+    Find a MW item by name.
+    
+    Searches the following lists in order:
+        MW Items (gear etc)
+        MW Materials (crafted materials)
+        MW Resources (raw materials)
+    If no corresponding item is found it is assumed to be a resource with 0 value.
+    
+    Returns:
+        MWObject: The fetched MW object.
+    """
     from Modules.objects.material import MWMaterial
     from Modules.objects.item import MWItem, MWResource
 
@@ -25,7 +37,9 @@ def find_mw_object(name: str, assume_resource: bool = True) -> "item.MWObject":
     return None
 
 def aggregate_tuple_lists(target: List[Tuple], source: List[Tuple]):
-    """Combine two lists of Tuple[float, str] by adding the number for matching strings."""
+    """
+    Combine two lists of Tuple[float, str] by adding the number for matching strings.
+    """
     for source_entry in source:
                 matches = list(filter(lambda output_entry: output_entry[1] == source_entry[1], target))
                 if len(matches) > 0:
@@ -34,6 +48,9 @@ def aggregate_tuple_lists(target: List[Tuple], source: List[Tuple]):
                     target.append(source_entry)
 
 def load_all_files():
+    """
+    Loads all the data files containing resources, recipes, artisans etc.
+    """
     from Modules.objects.recipe import Artisan, Tool, Supplement
     from Modules.objects.item import MWItem, MWResource
     from Modules.objects.material import MWMaterial

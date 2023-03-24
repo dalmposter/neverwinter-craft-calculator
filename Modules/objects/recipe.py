@@ -21,6 +21,7 @@ class Tool():
         self.name = data[1]
         self.proficiency = float(data[2])
         self.focus = float(data[3])
+        # Extract the special ability of this tool (if any)
         self.dab_hand_chance = float(data[4]) / 100 if data[5] == "Dab Hand" else 0
         self.recycle_chance = float(data[4]) / 100 if data[5] == "Recycle" else 0
     
@@ -35,6 +36,12 @@ class Tool():
                 cls.OBJECTS[new_tool.name] = new_tool
     
     def pretty_print(self):
+        """
+        Print this tools stats.
+        
+        Returns:
+            str: The formatted stats for this tool.
+        """
         if self.dab_hand_chance > 0:
             ability_str = f" {self.dab_hand_chance}d"
         elif self.recycle_chance > 0:
@@ -72,7 +79,13 @@ class Supplement():
                 new_supplement = Supplement(row)
                 cls.OBJECTS[new_supplement.name] = new_supplement
     
-    def pretty_print(self):
+    def pretty_print(self) -> str:
+        """
+        Print this supplements stats.
+        
+        Returns:
+            str: The formatted stats of this supplement.
+        """
         if self.dab_hand_chance > 0:
             supplement_ability_str = f" {self.dab_hand_chance}d"
         elif self.recycle_chance > 0:
@@ -85,6 +98,17 @@ class Supplement():
         return out
 
     def craft(self, quantity: float = 1) -> MWRecipe:
+        """
+        Calculate the resource costs for crafting this supplement.
+        
+        Hard coded to use Beatrice (best +1 recycle crafter), Gond Hammer, and Wintergreen
+        Tea +1. Intentionally never using any MW supplements to prevent recursion in
+        calculations. This is the best setup for crafting supplements without using a MW
+        supplement to do it.
+        
+        Returns:
+            MWRecipe: A recipe representing the costs to craft this supplement.
+        """
         if self.supplement_recipe is None:
             self.supplement_recipe = self.object.craft(
                     next(x for x in Artisan.OBJECTS.get("Alchemist") if x.name == "Beatrice"),
@@ -99,12 +123,24 @@ class Supplement():
         return out
 
     def craft_by_stats(self, quantity: float = 1, success_chance: float = 1,
-              dab_chance: float = 0, recycle_chance: float = 0,
-              auxillary_success_chance: float = None,
-              auxillary_dab_chance: float = None, auxillary_recycle_chance:float = None) -> Recipe:
-        return self.object.craft_by_stats(quantity, success_chance, dab_chance, recycle_chance,
-                                          auxillary_success_chance, auxillary_dab_chance,
-                                          auxillary_recycle_chance)
+            dab_chance: float = 0, recycle_chance: float = 0,
+            auxillary_success_chance: float = None, auxillary_dab_chance: float = None,
+            auxillary_recycle_chance:float = None) -> Recipe:
+        """
+        Deprecated function.
+        
+        Returns the result of crafting this supplement with fixed stats.
+        
+        Returns:
+            Recipe: The list of materials used to craft this supplement.
+        """
+        return self.object.craft_by_stats(
+            quantity, success_chance,
+            dab_chance, recycle_chance,
+            auxillary_success_chance,
+            auxillary_dab_chance,
+            auxillary_recycle_chance
+        )
 
 class Artisan():
     
@@ -145,7 +181,13 @@ class Artisan():
                 else:
                     cls.OBJECTS[new_artisan.profession] = [new_artisan]
     
-    def pretty_print(self):
+    def pretty_print(self) -> str:
+        """
+        Return the details of this artisan, nicely formatted for printed.
+        
+        Returns:
+            str: The formatted artisan details.
+        """
         if self.dab_hand_chance > 0:
             artisan_ability_str = f" {self.dab_hand_chance}d"
         elif self.recycle_chance > 0:
@@ -155,6 +197,14 @@ class Artisan():
         return f"{self.name} [{self.rarity}] ({int(self.proficiency)}/{int(self.focus)}{artisan_ability_str})"
 
 class MWRecipe:
+    """
+    Represents a way of crafting a given item, and the associated costs.
+    
+    Contains the artisan, tool, and supplement used, as well as the material cost to craft
+    the given quantity including the material cost for all supplements that would be
+    consumed. Also provides stats about the crafting such as how many failures would be
+    expected, how many normal or +1 results would be made as a by-product.
+    """
     def __init__(self, result: item.MWItem = None, quantity = 1, artisan: Artisan = None,
                  tool: Tool = None, supplement: Supplement = None, high_quality: bool = False):
         self.result: item.MWItem = result
@@ -172,6 +222,12 @@ class MWRecipe:
         self.attempts: float = None
     
     def get_cost(self) -> float:
+        """
+        Calculates the total cost of this recipe.
+        
+        Returns:
+            float: the total cost in AD to craft this recipe.
+        """
         cost: float = 0.0
         for entry in self.materials:
             cost += entry[0] * find_mw_object(entry[1]).price
@@ -180,6 +236,9 @@ class MWRecipe:
         return cost
     
     def multiply(self, quantity: float) -> MWRecipe:
+        """
+        Multiply the contents of a recipe by a number.
+        """
         # TODO: Implement custom copy and deepcopy function to replace this
         output: MWRecipe = MWRecipe()
         output.result = self.result
@@ -210,15 +269,31 @@ class MWRecipe:
     
     @abstractstaticmethod
     def pretty_print_list(input: List[Tuple['MWRecipe', float]]):
+        """
+        Print details for a list of recipes one after the other.
+        
+        The first one will have a full pretty print, while the rest will have a more
+        concise output.
+        """
         input[0][0].pretty_print()
         print("------------------------------------------------------------------------------------------------------------------------------------------------")
         for recipe_rank in input:
             print(f"{'{:,}'.format(round(recipe_rank[1]))} AD ({round(recipe_rank[0].normal_results, 2)} Normal, {round(recipe_rank[0].high_quality_results, 2)} +1): {recipe_rank[0].artisan.pretty_print()} + {recipe_rank[0].supplement.pretty_print()}")
     
     def quick_print(self):
+        """
+        Print in the console a summary of the artisan and supplement used.
+        """
         print(f"\n{self.result.name}: {self.artisan.pretty_print()} + {self.supplement.pretty_print()}")
     
     def pretty_print(self):
+        """
+        Print in the console a pretty representation of this recipe.
+        
+        Includes the Aritsan and supplement used (tool is always assumed to be Gond Hammer).
+        Also shows the normal:+1 result ratio and the full list of materials consumed and
+        their overall cost.
+        """
         print(f"\n{self.result.name}{' +1' if self.high_quality else ''}")
         print("------------------------------------------------------------------------------------------------------------------------------------------------")
         print(f"{self.artisan.pretty_print()} + {self.supplement.pretty_print()} : {round(self.attempts, 2)} Attempts")
