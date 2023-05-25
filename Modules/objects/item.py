@@ -75,7 +75,10 @@ class MWItem(MWObject):
             quantity = float(row[3][:-1])
             item_name = row[4]
             self.recipe.append([quantity, item_name])
-        #self.commission: float = float(data[0][16])
+        try:
+            self.commission: float = float(data[0][16])
+        except:
+            self.commission: float = 0
         
         self.optimal_recipes: List[Tuple[recipe.MWRecipe, float]] = None
         self.hq_optimal_recipes: List[Tuple[recipe.MWRecipe, float]] = None
@@ -203,7 +206,7 @@ class MWItem(MWObject):
         output = super().craft(artisan, tool, supplement, quantity, high_quality)
         
         success_chance = (artisan.proficiency + tool.proficiency + supplement.proficiency)/self.proficiency
-        focus_differential = self.focus - artisan.focus - tool.proficiency - supplement.focus
+        focus_differential = self.focus - artisan.focus - tool.focus - supplement.focus
         high_quality_chance = max(
             1 - (FOCUS_MULTIPLIER * focus_differential),
             0.0000001
@@ -262,8 +265,11 @@ class MWItem(MWObject):
         # Add meta-data to recipe
         output.attempts = expected_attempts
         output.failures = expected_attempts * (1-success_chance)
-        output.normal_results = expected_attempts * (success_chance * (1-high_quality_chance)) * (1+dab_hand_chance)
-        output.high_quality_results = expected_attempts * (success_chance * high_quality_chance) * (1+dab_hand_chance)
+        output.normal_results = expected_attempts * (success_chance * (1-high_quality_chance))
+        output.high_quality_results = expected_attempts * (success_chance * high_quality_chance)
+        if output.result.can_dab_hand:
+            output.normal_results *= (1+dab_hand_chance)
+            output.high_quality_results *= (1+dab_hand_chance)
         
         return output
     

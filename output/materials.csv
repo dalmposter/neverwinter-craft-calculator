@@ -1,0 +1,35 @@
+name|quantity|canDabHand|proficiency|focus|unlock|profession|commission|recipe
+Lakh Varnish|3.0|True|1400|1400|Chultan Masterwork - Alchemy I|Alchemy|0.4125|[[15.0, 'Lakh Resin'], [5.0, 'Terebinth']]
+Living Varnish|3.0|True|1400|1400|Chultan Masterwork - Alchemy I|Alchemy|0.4125|[[1.0, 'Tear of Ubtao'], [3.0, 'Lakh Varnish']]
+Ears 'N Tears|3.0|True|1400|1400|Sharandar Masterwork - Alchemy|Alchemy|0.5|"[[15.0, ""Weeping Willow's Tears""], [5.0, 'Terebinth']]"
+Salty Tears Varnish|3.0|True|1400|1400|Sharandar Masterwork - Alchemy|Alchemy|0.5|"[[1.0, ""Weeping Willow's Tears""], [3.0, ""Ears 'N Tears""]]"
+Bronzewood Lumber|4.0|True|1400|1400|Chultan Masterwork - Artificing I|Artificing|2.0625|[[12.0, 'Bronzewood Log'], [1.0, 'Tincal']]
+Hardened Bronzewood|2.0|True|1400|1400|Chultan Masterwork - Armorsmithing I|Armorsmithing|3.3|[[4.0, 'Bronzewood Lumber'], [1.0, 'Lakh Varnish']]
+Feywood Lumber|4.0|True|1400|1400|Sharandar Masterwork - Armorsmithing|Armorsmithing|3.3|[[12.0, 'Feywood Log'], [1.0, 'Soulfire Flies']]
+Hardened Feywood|2.0|True|1400|1400|Sharandar Masterwork - Armorsmithing|Armorsmithing|3.3|"[[4.0, 'Feywood Lumber'], [1.0, ""Ears 'N Tears""]]"
+Living Bronzewood|3.0|True|1400|1400|Chultan Masterwork - Artificing I|Artificing|2.0625|[[4.0, 'Bronzewood Lumber'], [1.0, 'Tear of Ubtao']]
+Lichstone Enamel|3.0|True|1400|1400|Chultan Masterwork - Artificing I|Artificing|2.0625|[[3.0, 'Lichstone']]
+Living Feywood|3.0|True|1400|1400|Sharandar Masterwork - Artificing|Artificing|2.0625|"[[4.0, 'Feywood Lumber'], [1.0, ""Weeping Willow's Tears""]]"
+Dawn's Silver Enamel|3.0|True|1400|1400|Sharandar Masterwork - Artificing|Artificing|2.0625|"[[1.0, ""Shard of Dawn's Light""], [4.0, 'Silvertongue Moss']]"
+Chultan Wootz Ingot|5.0|True|1400|1400|Chultan Masterwork - Blacksmithing I|Blacksmithing|4.95|[[5.0, 'Chultan Wootz Ore'], [3.0, 'Chultan Tea Leaves']]
+Obsidian Shard|4.0|True|1400|1400|Chultan Masterwork - Blacksmithing I|Blacksmithing|4.95|[[12.0, 'Obsidian'], [1.0, 'Red Rouge']]
+Soulfired Obsidian|3.0|True|1400|1400|Chultan Masterwork - Blacksmithing I|Blacksmithing|4.95|[[4.0, 'Obsidian Shard'], [1.0, 'Mote of Soulfire']]
+Frozen Dawn's Dew|4.0|True|1400|1400|Sharandar Masterwork - Blacksmithing|Blacksmithing|4.95|"[[4.0, ""Shard of Dawn's Light""], [1.0, 'Shattered Snowflakes']]"
+Silver Vines|3.0|True|1400|1400|Sharandar Masterwork - Blacksmithing|Blacksmithing|4.95|"[[12.0, 'Silvertongue Moss'], [1.0, ""Shard of Dawn's Light""]]"
+Brilliant Bead|4.0|True|1400|1400|Chultan Masterwork - Jewelcrafting I|Jewelcrafting|3.3|[[12.0, 'Batiri Prism'], [4.0, 'Red Rouge']]
+Fanged Ornament|2.0|True|1400|1400|Chultan Masterwork - Jewelcrafting I|Jewelcrafting|3.3|[[4.0, 'Brilliant Bead'], [3.0, 'Jute Macrame'], [6.0, 'Allosaur Fang']]
+Feathered Ornament|2.0|True|1400|1400|Chultan Masterwork - Jewelcrafting I|Jewelcrafting|3.3|[[4.0, 'Brilliant Bead'], [3.0, 'Jute Macrame'], [12.0, 'Brilliant Pinion']]
+Beads of Light|4.0|True|1400|1400|Sharandar Masterwork - Jewelcrafting|Jewelcrafting|10.0|"[[12.0, 'Silvertongue Moss'], [4.0, 'Silver Vines'], [1.0, ""Shard of Dawn's Light""]]"
+Crystalline Ornament|2.0|True|1400|1400|Sharandar Masterwork - Jewelcrafting|Jewelcrafting|10.0|"[[4.0, 'Beads of Light'], [3.0, 'Woven Whiskers'], [12.0, ""Shard of Dawn's Light""]]"
+Thorned Ornament|2.0|True|1400|1400|Sharandar Masterwork - Jewelcrafting|Jewelcrafting|10.0|[[4.0, 'Beads of Light'], [3.0, 'Woven Whiskers'], [6.0, 'Corpse Flower Thorn']]
+Lion Fur|2.0|True|1400|1400|Chultan Masterwork - Leatherworking I|Leatherworking|2.8875|"[[10.0, 'Lion Hide'], [3.0, ""Tanner's Liquor""], [3.0, 'Tincal']]"
+Lacquered Dinosaur Leather|2.0|True|1400|1400|Chultan Masterwork - Leatherworking I|Leatherworking|2.8875|"[[12.0, 'Chultan Tea Leaves'], [1.0, ""Tanner's Liquor""], [2.0, 'Lakh Varnish'], [8.0, 'Dinosaur Hide']]"
+Lacquered Leaves|2.0|True|1400|1400|Sharandar Masterwork - Leatherworking|Leatherworking|2.8875|"[[12.0, 'Questionable Piece of Leather'], [1.0, ""Ears 'N Tears""], [1.0, 'Soulfire Flies'], [6.0, 'Dryad Hair']]"
+Lacquered 'Aged' Leather|2.0|True|1400|1400|Sharandar Masterwork - Leatherworking|Leatherworking|2.8875|"[[12.0, ""Shadowdemon's Eyes""], [1.0, 'Soulfire Flies'], [2.0, ""Ears 'N Tears""], [8.0, 'Questionable Piece of Leather']]"
+Chultan Silk Thread|4.0|True|1400|1400|Chultan Masterwork - Tailoring I|Tailoring|2.8875|[[12.0, 'Silkworm Cocoon'], [6.0, 'Chultan Spring Water']]
+Chultan Silk|2.0|True|1400|1400|Chultan Masterwork - Tailoring I|Tailoring|2.8875|[[4.0, 'Chultan Silk Thread'], [1.0, 'Potash'], [4.0, 'Spider Silk']]
+Jute Macrame|3.0|True|1400|1400|Chultan Masterwork - Tailoring I|Tailoring|2.8875|[[15.0, 'Samarachan Jute']]
+Fey Fibers|1.0|True|1400|1400|Sharandar Masterwork - Tailoring|Tailoring|2.8875|"[[12.0, 'Dryad Hair'], [6.0, ""Weeping Willow's Tears""]]"
+Fey'd Fabrics|3.0|True|1400|1400|Sharandar Masterwork - Tailoring|Tailoring|2.8875|"[[12.0, 'Dryad Hair'], [6.0, ""Weeping Willow's Tears""]]"
+Woven Fey Leaves|2.0|True|1400|1400|Sharandar Masterwork - Tailoring|Tailoring|2.8875|[[4.0, 'Fey Fibers'], [1.0, 'Soulfire Flies'], [4.0, 'Dryad Hair']]
+Woven Whiskers|2.0|True|1400|1400|Sharandar Masterwork - Tailoring|Tailoring|2.8875|"[[15.0, ""Displacer Beast's Whisker""]]"

@@ -16,7 +16,6 @@ class Tool():
     OBJECTS: Dict[str, "Tool"] = {}
     
     def __init__(self, data: List[str]):
-        super().__init__()
         self.profession = data[0]
         self.name = data[1]
         self.proficiency = float(data[2])
@@ -55,7 +54,6 @@ class Supplement():
     OBJECTS: Dict[str, "Supplement"] = {}
     
     def __init__(self, data: List[str]):
-        super().__init__()
         if data[0][-3:] == " +1":
             self.high_quality = True
         else:
@@ -92,10 +90,7 @@ class Supplement():
             supplement_ability_str = f" {self.recycle_chance}r"
         else:
             supplement_ability_str = ""
-        out = f"{self.name} ({int(self.proficiency)}/{int(self.focus)}{supplement_ability_str})"
-        if self.high_quality:
-            out = out + " +1"
-        return out
+        return f"{self.name} ({int(self.proficiency)}/{int(self.focus)}{supplement_ability_str})"
 
     def craft(self, quantity: float = 1) -> MWRecipe:
         """
@@ -156,7 +151,6 @@ class Artisan():
     }
     
     def __init__(self, data: List[str]):
-        super().__init__()
         self.profession = data[0]
         self.name = data[1]
         self.rarity = data[2]

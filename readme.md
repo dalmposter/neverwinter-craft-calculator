@@ -17,7 +17,7 @@ Run this simply with
 python calculator.py
 ```
 
-Once it is running you can enter the name of any item and it will calculate the top 10 artisan/tool/supplement combos and print them to the screen along with their cost and ratio of normal to high quality outputs. Note the input files are currently rigged to only include the Forgehammer of Gond and no other tools. This is because I found the hammer to be the best tool for all recipes and having others in the pool clogged up the output.
+Once it is running you can enter the name of any item and it will calculate the top 10 artisan/tool/supplement combos and print them to the screen along with their cost and ratio of normal to high quality outputs. Note the input files are currently rigged to only include the Forgehammer of Gond and no other tools. This is because I found the hammer to be the best tool for all recipes and having others in the pool clogged up the output. Therefore I removed tool from the printed output.
 
 Some calculations can take a few moments, particularly the first few (it caches any previous calculations within the same session), so I have made it print what it is doing to the screen so I can know what's taking so long. This is just 1 line of code, if you wanna disable it just comment out that line.
 

@@ -2,6 +2,7 @@ import os
 import logging
 import traceback
 from Modules.objects.recipe import *
+from Modules.objects.item import MWItem
 from Modules.util import find_mw_object, load_all_files
 
 cwd = os.path.dirname(__file__)
